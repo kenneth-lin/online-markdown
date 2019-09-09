@@ -12,12 +12,12 @@ module.exports = {
     },
     //入口文件输出配置
     output: {
-        path: 'docs/js/',
+        path: __dirname + '/docs/js/',
         filename: '[name].js'
     },
     module: {
         //加载器配置
-        loaders: [
+        rules: [
             { test: /\.css$/, loader: 'style-loader!css-loader' },
             { test: /\.js$/, loader: 'jsx-loader?harmony' },
             { test: /\.less$/, loader: 'style-loader!css-loader!less-loader?sourceMap'},
