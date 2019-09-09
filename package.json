@@ -4,7 +4,10 @@
   "description": "A online markdown converter specially for Wechat Public formatting.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --mode=production",
+    "runweb": "http-server ./docs -p 2000 -o http://localhost:2000/index.html?%time%",
+    "start": "npm run webpack && npm run runweb"
   },
   "repository": {
     "type": "git",
@@ -22,16 +25,17 @@
   },
   "homepage": "https://github.com/barretlee/online-markdown",
   "dependencies": {
-    "copy-webpack-plugin": "~4.0.1"
+    "webpack-cli": "^3.3.8"
   },
   "devDependencies": {
-    "css-loader": "^0.26.1",
-    "file-loader": "^0.10.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
     "jsx-loader": "^0.13.2",
-    "less": "^2.7.2",
-    "less-loader": "^2.2.3",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^2.2.1"
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.3"
   }
 }
